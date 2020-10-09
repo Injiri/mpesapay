@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/mpesapay.iml" filepath="$PROJECT_DIR$/mpesapay.iml" />
+      <module fileurl="file://$PROJECT_DIR$/api/mpesapay-api.iml" filepath="$PROJECT_DIR$/api/mpesapay-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/omod/mpesapay-omod.iml" filepath="$PROJECT_DIR$/omod/mpesapay-omod.iml" />
+    </modules>
+  </component>
+</project>
