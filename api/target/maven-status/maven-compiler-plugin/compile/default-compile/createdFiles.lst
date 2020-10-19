@@ -1,9 +1,0 @@
-org/openmrs/module/mpesapay/api/dao/MpesapayDao.class
-org/openmrs/module/mpesapay/Item.class
-org/openmrs/module/mpesapay/Constants.class
-org/openmrs/module/mpesapay/api/impl/MpesapayServiceImpl.class
-org/openmrs/module/mpesapay/Main.class
-org/openmrs/module/mpesapay/MpesapayActivator.class
-org/openmrs/module/mpesapay/api/MpesapayService.class
-org/openmrs/module/mpesapay/MpesapayConfig.class
-org/openmrs/module/mpesapay/Mpesa.class
