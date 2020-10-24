@@ -9,9 +9,9 @@
  */
 package org.openmrs.module.mpesapay.api.dao;
 
+import org.hibernate.SessionFactory;
+import org.hibernate.classic.Session;
 import org.hibernate.criterion.Restrictions;
-import org.openmrs.api.db.hibernate.DbSession;
-import org.openmrs.api.db.hibernate.DbSessionFactory;
 import org.openmrs.module.mpesapay.Item;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -20,9 +20,9 @@ import org.springframework.stereotype.Repository;
 public class MpesapayDao {
 	
 	@Autowired
-	DbSessionFactory sessionFactory;
+	SessionFactory sessionFactory;
 	
-	private DbSession getSession() {
+	private Session getSession() {
 		return sessionFactory.getCurrentSession();
 	}
 	
