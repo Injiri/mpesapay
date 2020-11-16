@@ -3,6 +3,36 @@
 <body></body>
 <header>
 </header>
+<script>
+    var jq = jQuery;
+
+    function validate() {
+        var billCode = document.forms["lipanampesaForm"]["billcode"].value;
+        var accountNumber = document.forms["lipanampesaForm"]["accountnumber"].value;
+        var paymentAmount = document.forms["lipanampesaForm"]["paymentammount"].value;
+
+        if (billCode == null) {
+            alert("please provide the bill for psyment";
+            return false;
+        }
+        if (accountNumber == null) {
+            alert("provided the account number");
+            return false;
+        }
+        if (paymentAmount == null) {
+            alert("provide the account number")
+            return false;
+        }
+        document.getElementById("lipanampesaForm").submit();
+
+    }
+
+    jq("#payButton").onclick("click", function () {
+        validate();
+        // /TODO redirect to processed transactions list.
+
+    });
+</script>
 
 <div class="container">
     <div class="example">
@@ -39,47 +69,47 @@
 
 <ul style=" margin-top: 10px;" class="grid"></ul>
 
-
-<form method="post" id="lipanampesaForm" action="lipanampesaForm.page?ipdWard=100126282">
+<form method="post" id="lipanampesaForm" action="lipanampesaForm.page? ">
     <div style="float: left">
-        <img src="/openmrs/ms/uiframework/resource/ipdapp/images/patient-transfer.png"
+        <img src="/ms/uiframework/resource/ipdapp/images/patient-transfer.png"
              style="border-right: 1px solid #eee; height: 185px; margin-right: 10px; padding: 5px 15px 0 5px;">
     </div>
 
     <div style="display: block; overflow:hidden">
 
-                   <label>Bill code</label>
-            <span>
-                <input required="" name="billCode" id="billCode" type="number">
-            </span>
-            <label>Business Number</label>
-            <span>
-                <input required="" name="businessNumber" id="businessNumber" type="number">
-            </span>
-            <label>Account Number</label>
-            <span>
-                <input required="" name="accountNumber" id="accountNumber" type="number">
-            </span>
-            <label>Amount</label>
-            <span>
-                <input required="" name="paymentAmount" id="paymentAmount" type="number">
-            </span>
+        <label>Bill code</label>
+        <span>
+            <input required="" name="billCode" id="billCode" type="number">
+        </span>
+        <label>Business Number</label>
+        <span>
+            <input required="" name="businessNumber" id="businessNumber" type="number">
+        </span>
+        <label>Account Number</label>
+        <span>
+            <input required="" name="accountNumber" id="accountNumber" type="number">
+        </span>
+        <label>Amount</label>
+        <span>
+            <input required="" name="paymentAmount" id="paymentAmount" type="number">
+        </span>
 
 
-            <label></label>
-            <span style="margin-top: 5px">
-                <a type="submit" class="button confirm right" id="payButton" style="margin-right: 0px !important;">
-                    <i class="icon-hospital"></i>
-                    Pay
-                </a>
-                <a type="submit" class="button cancel">
-                    <i class="icon-remove "></i>
-                    Cancel
-                </a>
-            </span>
+        <label></label>
+        <span style="margin-top: 5px">
+            <a type="submit" class="button confirm right" id="payButton" style="margin-right: 0px !important;">
+                <i class="icon-hospital"></i>
+                Pay
+            </a>
+            <a type="submit" class="button cancel">
+                <i class="icon-remove "></i>
+                Cancel
+            </a>
+        </span>
 
-        </div>
-    </form>
+    </div>
+</form>
+
 <style>
 
 .f2:hover {
@@ -283,4 +313,6 @@ form input:focus, form select:focus, form textarea:focus, form ul.select:focus, 
 </style>
 
 
-<div class="clear"></div>
+<div class="clear">
+
+</div>
