@@ -3,7 +3,7 @@
  * v. 2.0. If a copy of the MPL was not distributed with this file, You can
  * obtain one at http://mozilla.org/MPL/2.0/. OpenMRS is also distributed under
  * the terms of the Healthcare Disclaimer located at http://openmrs.org/license.
- *
+ * <p>
  * Copyright (C) OpenMRS Inc. OpenMRS is a registered trademark and the OpenMRS
  * graphic logo is a trademark of OpenMRS Inc.
  */
@@ -15,6 +15,8 @@ import org.openmrs.api.OpenmrsService;
 import org.openmrs.module.mpesapay.MpesapayConfig;
 import org.openmrs.module.mpesapay.Item;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.io.IOException;
 
 /**
  * The main service of this module, which is exposed for other modules. See
@@ -45,4 +47,11 @@ public interface MpesapayService extends OpenmrsService {
 	@Authorized(MpesapayConfig.MODULE_PRIVILEGE)
 	@Transactional
 	Item saveItem(Item item) throws APIException;
+	
+	@Authorized(MpesapayConfig.MODULE_PRIVILEGE)
+	String MpesaPayAuthenticate(String appKey, String appSecret) throws IOException;
+	
+	@Authorized(MpesapayConfig.MODULE_PRIVILEGE)
+	String MpesaPayC2BSimulation(String shortCode, String commandID, String amount, String MSISDN, String billRefNumber,
+	        String authenticationAccessToken) throws IOException;
 }
